@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>My Todo List</h1>
+    <div class="container">
+      <p id="head" style="padding-right: 20px">Enter</p>
+      <input id="input" placeholder="task" style="margin-right: 20px" />
+      <button onclick="add()">Add</button>
+    </div>
+
+    <div class="task">
+      <ul id="list"></ul>
+    </div>
+  </body>
+  <script>
+    var input = document.getElementById("input");
+    function add() {
+      var list = document.createElement("li");
+
+      list.innerHTML = input.value;
+      var button = document.createElement("button");
+      button.innerHTML = "Delete";
+      button.style.marginLeft = "15px"; // styling to get gap between point and button
+      button.style.marginBottom = "15px";
+      //styling to get gap between  buttons in each row
+      button.onclick = function () {
+        del(this);
+      };
+      list.append(button);
+
+      document.getElementById("list").append(list);
+    }
+    function del(element) {
+      element.parentElement.remove();
+    }
+  </script>
+</html>

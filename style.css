@@ -1,0 +1,35 @@
+h1 {
+  text-align: center;
+  color: green;
+}
+#head {
+  color: olive;
+  font-size: 20px;
+  font-weight: solid;
+}
+p,
+input {
+  align-items: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.task::before {
+  font-weight: bold;
+  margin-right: 5px;
+}
+li {
+  margin-right: 50px;
+  text-decoration: solid;
+  font-size: 30px;
+  max-width: 30%;
+}
+button:hover {
+  color: olive;
+  border: none;
+}
+body {
+  background-color: yellowgreen;
+}
